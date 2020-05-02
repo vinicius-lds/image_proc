@@ -4,8 +4,6 @@ from matplotlib import pyplot as plt
 
 original = cv2.cvtColor(cv2.imread('imgHist.png'), cv2.COLOR_BGR2RGB)
 
-
-
 expanded = cv2.convertScaleAbs(original, beta=25, alpha=9)
 median_filtering = cv2.medianBlur(expanded, 11)
 avg_filtering = cv2.boxFilter(median_filtering, -1, (11, 11))
